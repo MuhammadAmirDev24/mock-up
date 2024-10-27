@@ -15,6 +15,7 @@ import VideocamIcon from "@mui/icons-material/Videocam";
 import PentagonIcon from "@mui/icons-material/Pentagon";
 import SpaceDashboardIcon from "@mui/icons-material/SpaceDashboard";
 import PaidIcon from "@mui/icons-material/Paid";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -57,6 +58,46 @@ const navigations = [
       { name: "Billings", icon: PaidIcon },
     ],
   },
+];
+
+const integrations = [
+  {
+    name: "Apple Calenders",
+    description: "Sync Events (macOS only)",
+    icon: "",
+  },
+  {
+    name: "Spotify",
+    description: "Visualize listened songs on your calendar",
+    icon: "",
+  },
+  {
+    name: "Zoom",
+    description: "Create video calls from your calendar",
+    icon: "",
+  },
+  {
+    name: "Linear",
+    description: "Project Management and Issue tracking",
+    icon: "",
+  },
+  {
+    name: "Notion",
+    description: "Project Management and Issue Tracking",
+    icon: "",
+  },
+  {
+    name: "Todoist",
+    description: "Project Management and Issue Tracking",
+    icon: "",
+  },
+  {
+    name: "TickTick",
+    description: "Project Management and Issue Tracking",
+    icon: "",
+  },
+  { name: "Things", description: "Sync todos", icon: "" },
+  { name: "Apple Reminders", description: "Sync todos", icon: "" },
 ];
 
 const Settings = () => {
@@ -129,22 +170,29 @@ const Settings = () => {
         </Grid>
 
         {/* Main Content Column */}
-        <Grid item size={6}>
+        <Grid item size={6} sx={{ marginTop: "15px" }}>
           <Grid item size={12}>
-            <Item>Column 2, Row 1</Item>
-          </Grid>
-          <Grid item size={12} sx={{ mt: 2 }}>
-            <Item>Column 2, Row 2</Item>
+            <div className="center-content">
+              <div className="heading">
+                <p style={{ fontSize: "20px", fontWeight: "500" }}>
+                  Integrations
+                </p>
+                <p style={{ marginTop: "-10px", color: "gray" }}>
+                  Connect Amie with your existing tools.
+                </p>
+              </div>
+            </div>
           </Grid>
         </Grid>
 
         {/* Optional Right Column */}
-        <Grid item size={1}>
+        <Grid item size={1} sx={{ marginTop: "30px" }}>
           <Grid item size={12}>
-            <Item>Column 3, Row 1</Item>
-          </Grid>
-          <Grid item size={12} sx={{ mt: 2 }}>
-            <Item>Column 3, Row 2</Item>
+            <div className="leave-btn">
+              <CloseIcon />
+            </div>
+
+            <span className="esc">ESC</span>
           </Grid>
         </Grid>
       </Grid>
