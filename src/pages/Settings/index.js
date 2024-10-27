@@ -17,6 +17,15 @@ import SpaceDashboardIcon from "@mui/icons-material/SpaceDashboard";
 import PaidIcon from "@mui/icons-material/Paid";
 import CloseIcon from "@mui/icons-material/Close";
 
+import AppleReminder from "../../Assets/icons/applereminder.png";
+import Calender from "../../Assets/icons/calander.png";
+import Linear from "../../Assets/icons/linear.png";
+import Notion from "../../Assets/icons/notion.png";
+import Spotify from "../../Assets/icons/spotify.png";
+import Things from "../../Assets/icons/things.png";
+import TickTick from "../../Assets/icons/ticktick.png";
+import Zoom from "../../Assets/icons/zoom.png";
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
   ...theme.typography.body2,
@@ -64,40 +73,40 @@ const integrations = [
   {
     name: "Apple Calenders",
     description: "Sync Events (macOS only)",
-    icon: "",
+    icon: Calender,
   },
   {
     name: "Spotify",
     description: "Visualize listened songs on your calendar",
-    icon: "",
+    icon: Spotify,
   },
   {
     name: "Zoom",
     description: "Create video calls from your calendar",
-    icon: "",
+    icon: Zoom,
   },
   {
     name: "Linear",
     description: "Project Management and Issue tracking",
-    icon: "",
+    icon: Linear,
   },
   {
     name: "Notion",
     description: "Project Management and Issue Tracking",
-    icon: "",
+    icon: Notion,
   },
   {
     name: "Todoist",
     description: "Project Management and Issue Tracking",
-    icon: "",
+    icon: Things,
   },
   {
     name: "TickTick",
     description: "Project Management and Issue Tracking",
-    icon: "",
+    icon: TickTick,
   },
-  { name: "Things", description: "Sync todos", icon: "" },
-  { name: "Apple Reminders", description: "Sync todos", icon: "" },
+  { name: "Things", description: "Sync todos", icon: Things },
+  { name: "Apple Reminders", description: "Sync todos", icon: AppleReminder },
 ];
 
 const Settings = () => {
@@ -180,6 +189,36 @@ const Settings = () => {
                 <p style={{ marginTop: "-10px", color: "gray" }}>
                   Connect Amie with your existing tools.
                 </p>
+              </div>
+              <div className="center">
+                <p>Apps</p>
+                <div className="list">
+                  {integrations.map((integ, index) => (
+                    <div className="integ-item">
+                      <img
+                        src={integ.icon}
+                        style={{ width: "40px", height: "40px" }}
+                        alt="Hello"
+                      ></img>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          margin: "0px",
+                          padding: "0px",
+                        }}
+                      >
+                        <strong>
+                          <p style={{ margin: "0px" }}>{integ.name}</p>
+                        </strong>
+                        <p style={{ margin: "0px", color: "gray" }}>
+                          {integ.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </Grid>
