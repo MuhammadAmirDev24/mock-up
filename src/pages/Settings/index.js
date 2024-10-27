@@ -73,7 +73,16 @@ const Settings = () => {
         }}
       >
         {/* Left Column with Navigation */}
-        <Grid item size={4} sx={{ alignSelf: "flex-start" }}>
+        <Grid
+          item
+          size={4}
+          sx={{
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "flex-start",
+            flexDirection: "column",
+          }}
+        >
           {navigations.map((cat) => (
             <ul
               className="settings-nav"
