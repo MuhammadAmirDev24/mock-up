@@ -81,6 +81,7 @@ const Settings = () => {
             alignItems: "flex-end",
             justifyContent: "flex-start",
             flexDirection: "column",
+            marginTop: "20px",
           }}
         >
           {navigations.map((cat) => (
@@ -122,6 +123,7 @@ const Settings = () => {
                   </li>
                 ))}
               </ul>
+              <div className="hr-tag" />
             </ul>
           ))}
         </Grid>

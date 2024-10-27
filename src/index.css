@@ -14,7 +14,9 @@ body {
   flex-direction: column;
   gap: 20px; /* Adjusts spacing between categories */
   color: gray;
+  width: 15vw;
   text-align: left;
+  margin-top: 10px;
 }
 
 .settings-nav-item {
@@ -35,10 +37,19 @@ body {
 }
 
 .settings-item:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: gray;
+  color: #d3d3d3;
   border-radius: 4px;
 }
 
 .icon {
   margin-right: 8px; /* Space between icon and text */
+}
+
+.hr-tag {
+  height: 0.5px;
+  width: auto;
+  border: none;
+  background: gray;
+  margin-top: 5px;
 }
